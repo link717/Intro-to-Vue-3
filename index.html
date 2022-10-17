@@ -15,13 +15,23 @@
         <div class="product-container">
           <div class="product-image">
             <!-- <img v-bind:src="image" alt="" /> -->
-            <a :href="url">
-              <img :src="image" alt="" />
-            </a>
+            <img :src="image" alt="" />
           </div>
           <div class="product-info">
-            <!-- {{}}: createApp의 data를 통해 전달된 props를 사용할때의 문법 -->
+            <!-- {{}}: createApp의 data를 통해 전달된 props를 사용할 때 문법 -->
             <h1>{{ product }}</h1>
+            <!-- v-show: element의 visibility 속성을 선택적으로 처리할 때 문법 -->
+            <!-- <p v-show="inStock">In Stock</p> -->
+
+            <!-- v-if와 v-else는 페어가 아니기 때문에 v-else를 사용할 필요가 없다면 사용하지 않아도 괜찮다. -->
+            <!-- <p v-if="inStock">In Stock</p> -->
+            <!-- <p v-else>Out Of Stock</p> -->
+
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
+            <p v-else>Out Of Stock</p>
+
+            <p v-if="onSale">On Sale</p>
           </div>
         </div>
       </div>
