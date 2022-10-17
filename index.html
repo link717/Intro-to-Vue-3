@@ -10,10 +10,17 @@
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
+      <!-- {{}}: createApp의 data를 통해 전달된 props를 사용할때의 문법 -->
+      <h1>{{ product }}</h1>
+      <p>{{description}}</p>
     </div>
 
-    <!-- Import Js -->
+    <!-- Import App -->
     <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app');
+    </script>
   </body>
 </html>
