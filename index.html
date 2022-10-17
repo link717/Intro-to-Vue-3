@@ -10,9 +10,21 @@
   </head>
   <body>
     <div id="app">
-      <!-- {{}}: createApp의 data를 통해 전달된 props를 사용할때의 문법 -->
-      <h1>{{ product }}</h1>
-      <p>{{description}}</p>
+      <div class="nav-bar"></div>
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <!-- <img v-bind:src="image" alt="" /> -->
+            <a :href="url">
+              <img :src="image" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <!-- {{}}: createApp의 data를 통해 전달된 props를 사용할때의 문법 -->
+            <h1>{{ product }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Import App -->

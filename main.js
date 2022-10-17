@@ -3,7 +3,8 @@ const app = Vue.createApp({
   data() {
     return {
       product: 'Socks',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './assets/images/socks_green.jpg',
+      url: 'https://vuemastery.com',
     };
   },
 });
