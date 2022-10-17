@@ -24,14 +24,22 @@
             <!-- <p v-show="inStock">In Stock</p> -->
 
             <!-- v-if와 v-else는 페어가 아니기 때문에 v-else를 사용할 필요가 없다면 사용하지 않아도 괜찮다. -->
-            <!-- <p v-if="inStock">In Stock</p> -->
-            <!-- <p v-else>Out Of Stock</p> -->
-
-            <p v-if="inventory > 10">In Stock</p>
-            <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
+            <p v-if="inStock">In Stock</p>
             <p v-else>Out Of Stock</p>
 
+            <!-- <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
+            <p v-else>Out Of Stock</p> -->
+
             <p v-if="onSale">On Sale</p>
+
+            <ul>
+              <li v-for="detail of details">{{detail}}</li>
+            </ul>
+
+            <div v-for="variant of variants" :key="variant.id">{{variant.color}}</div>
+
+            <div v-for="size of sizes" :key="size">{{size}}</div>
           </div>
         </div>
       </div>
